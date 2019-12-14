@@ -1,0 +1,21 @@
+<view class="contianer">
+  <view class="cu-bar bg-white">
+    <view class="action">
+      <text class="cuIcon-title text-blue"></text>
+      <text class="text-grey">仅显示最近15天的打卡记录</text>
+    </view>
+  </view>
+  <view class='cu-timeline' wx:for="{{list}}" wx:key="id">
+    <view class='cu-item'>
+      <view class="content">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-cyan">{{item.signDate}}</view>
+        </view>
+        <view>
+          <text class="text-grey">日记: </text><text class="text-shadow">{{item.signText}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

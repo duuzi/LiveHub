@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/basics/bmi/bmi",
+    "pages/basics/todolist/todolist",
+    "pages/basics/2048/2048",
+    "pages/basics/signIn/signIn",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/user/index/index",
+    "pages/history/history",
+    "pages/auth/auth"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "custom": false,
+    "color": "#000000",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "selectedIconPath": "images/sshouye.png",
+        "iconPath": "images/shouye.png",
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/suser.png",
+        "iconPath": "images/user.png",
+        "pagePath": "pages/user/index/index",
+        "text": "我的"
+      }
+    ]
+  }
+}

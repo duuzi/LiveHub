@@ -1,0 +1,15 @@
+/* pages/history/history.wxss */
+.go{
+  height: 48rpx;
+  border:none;
+  width: 162rpx;
+  background: rgba(255,255,255, 0.8);
+  border-radius: 4rpx;
+  line-height: 48rpx;
+  color: #b69150;
+  font-size: 24rpx;
+}
+
+
+
+

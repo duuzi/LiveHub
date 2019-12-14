@@ -1,0 +1,82 @@
+<view>
+
+  <view bindtap="addToDo" class="add-wrap" hover-class="plus-hover">
+    <image src="/images/alarmAdd.png"></image>
+  </view>
+  
+  <view class="cu-list menu sm-border card-menu margin-top margin-bottom shadow-warp">
+    <view class="cu-tag bg-blue text-bold">To Do</view>
+    <view class="cu-item {{modalName=='move-box-'+item.id?'move-cur':''}}" wx:for="{{toDoList}}" wx:key="index" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" bindtouchstart="ListTouchStart" data-target="move-box-{{item.id}}" wx:if="{{item.toDoType==0}}">
+      <view class="content">
+        <text class="text {{item.checked?'del-line':''}}">{{item.name}}</text>
+      </view>
+      <view class="action">
+        <checkbox-group bindchange="CheckBoxTap" data-item="{{item}}">
+          <checkbox class="round" checked="{{item.checked}}"></checkbox>
+        </checkbox-group>
+      </view>
+      <view class="move">
+        <view class="bg-red" bindtap="delToDo" data-item="{{item}}">删除</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-list menu sm-border card-menu margin-top margin-bottom shadow-warp">
+    <view class="cu-tag bg-orange text-bold">Things To Buy</view>
+    <view class="cu-item {{modalName=='move-box-'+item.id?'move-cur':''}}" wx:for="{{toDoList}}" wx:key="index" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" bindtouchstart="ListTouchStart" data-target="move-box-{{item.id}}" wx:if="{{item.toDoType==1}}">
+      <view class="content">
+        <text class="text {{item.checked?'del-line':''}}">{{item.name}}</text>
+      </view>
+      <view class="action">
+        <checkbox-group bindchange="CheckBoxTap" data-item="{{item}}">
+          <checkbox class="round" checked="{{item.checked}}"></checkbox>
+        </checkbox-group>
+      </view>
+      <view class="move">
+        <view class="bg-red" bindtap="delToDo" data-item="{{item}}">删除</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-list menu sm-border card-menu margin-top margin-bottom shadow-warp">
+    <view class="cu-tag bg-green text-bold">Training</view>
+    <view class="cu-item {{modalName=='move-box-'+item.id?'move-cur':''}}" wx:for="{{toDoList}}" wx:key="index" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" bindtouchstart="ListTouchStart" data-target="move-box-{{item.id}}" wx:if="{{item.toDoType==2}}">
+      <view class="content">
+        <text class="text {{item.checked?'del-line':''}}">{{item.name}}</text>
+      </view>
+      <view class="action">
+        <checkbox-group bindchange="CheckBoxTap" data-item="{{item}}">
+          <checkbox class="round" checked="{{item.checked}}"></checkbox>
+        </checkbox-group>
+      </view>
+      <view class="move">
+        <view class="bg-red" bindtap="delToDo" data-item="{{item}}">删除</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-modal {{modalShow?'show':''}}">
+    <view class="cu-dialog">
+      <view class="cu-bar bg-white justify-end">
+        <view class="content">Add ToDo</view>
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close text-red"></text>
+        </view>
+      </view>
+      <form bindsubmit="submitToDo">
+      <view class="padding-xl">
+          <input class="margin-bottom" name="toDoName" value='{{toDoName}}' placeholder="请输入待办事项..."></input>
+          <radio-group class="margin-top" name="toDoType" value='{{toDoType}}' bindchange="checkboxChange">
+            <label class="checkbox" wx:for="{{toDoType}}" wx:key="{{item.id}}">
+              <radio value="{{item.id}}" checked="{{item.checked}}" style="margin-left:20rpx" /> {{item.name}}
+            </label>
+          </radio-group>
+      </view>
+      <view class="cu-bar bg-white justify-end">
+        <view class="action">
+          <button class="cu-btn line-green text-green" bindtap="hideModal">取消</button>
+          <button formType="submit" class="cu-btn bg-green margin-left">确定</button>
+        </view>
+      </view>
+      </form>
+    </view>
+  </view>
+</view>

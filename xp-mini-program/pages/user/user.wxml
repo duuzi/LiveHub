@@ -1,0 +1,50 @@
+<!--pages/user/user.wxml-->
+<view>
+<view class="cu-bar bg-white">
+    <view class="action">
+      <text class="cuIcon-title text-red"></text>
+      <text class="text-grey">这个可以不用填写哦</text>
+    </view>
+  </view>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <!-- <view class="section section_gap">
+    <view class="section__title">switch</view>
+    <switch name="switch"/>
+  </view> -->
+  <!-- <view class="section section_gap">
+    <view class="section__title">slider</view>
+    <slider name="slider" show-value ></slider>
+  </view> -->
+<view class="cu-form-group margin-top">
+    <view class="title">手机号:</view>
+    <input name="phoneNumber" type="number" value="{{phoneNumber}}" placeholder="请输入手机号" />
+  </view>
+  <!-- <view class="cu-form-group margin-top">
+    <view class="title">工号:</view>
+    <input name="accountNo" value="{{accountNo}}" placeholder="请输入工号" />
+  </view>
+  <view class="cu-form-group margin-bottom">
+    <view class="title">姓名:</view>
+    <input name="accountName" value="{{accountName}}" placeholder="请输入姓名" />
+  </view> -->
+  <!-- <view class="section section_gap">
+    <view class="section__title">radio</view>
+    <radio-group name="radio-group">
+      <label><radio value="radio1"/>radio1</label>
+      <label><radio value="radio2"/>radio2</label>
+    </radio-group>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">checkbox</view>
+    <checkbox-group name="checkbox">
+      <label><checkbox value="checkbox1"/>checkbox1</label>
+      <label><checkbox value="checkbox2"/>checkbox2</label>
+    </checkbox-group>
+  </view> -->
+  <view class="cu-bar btn-group">
+    <button class="cu-btn bg-green shadow-blur round" formType="reset">清 空</button>
+    <button class="cu-btn bg-blue shadow-blur round"  formType="submit" >保 存</button>
+    
+  </view>
+</form>
+</view>

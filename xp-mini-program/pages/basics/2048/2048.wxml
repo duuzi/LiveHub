@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<view class='main'>
+  <view class='header'>
+    <view class='nickname' style='color: #CCC0B2;'>
+      玩家：
+      <open-data type="userNickName" lang="zh_CN"></open-data>
+      <open-data class='userimg' type="userAvatarUrl"></open-data>
+    </view>
+    <view class='score-wrap'>
+      <view class='score'>
+        <label>SCORE</label>
+        <text class='score-text'>{{score}}</text>
+      </view>
+      <view class='best-score'>
+        <label>BEST</label>
+        <text class='score-text'>{{bestScore}}</text>
+      </view>
+      <button class='restart' bindtap='restart'>重新开始</button>
+      <button class='restart margin-top' bindtap='showRank'>排行榜</button>
+    </view>
+  </view>
+  <view class='container' bindtouchstart='start' bindtouchmove='move' bindtouchend='end'>
+    <label class='item d{{item}}' wx:for='{{mydata}}' wx:key="id">
+      {{ item ? item : ''}}
+    </label>
+  </view>
+
+  <view class="cu-modal {{modalShow?'show':''}}" bindtap="hideModal">
+    <view class="cu-dialog" catchtap>
+      <radio-group class="block ">
+        <view class="cu-list menu text-left">
+          <view class="cu-item" wx:for="{{scoreList}}" wx:key="index">
+            <view class="cu-avatar round lg" style="background-image:url({{item.account.avatarUrl}});"></view>
+            <view class="content margin-left">
+              <view class="text-grey">{{item.account.nickName}}</view>
+              <view class="text text-sm flex">
+                <text class="text-cut">
+							<text class=" margin-right-xs"></text> {{item.score}}分</text>
+              </view>
+            </view>
+            <view class="action">
+              <view class="text-grey">第{{index+1}}名</view>
+            </view>
+          </view>
+        </view>
+      </radio-group>
+      <view class="cu-bar bg-white">
+        <view class="action margin-0 flex-sub  solid-left" bindtap="hideModal">我知道了</view>
+      </view>
+    </view>
+  </view>
+</view>

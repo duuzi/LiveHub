@@ -1,0 +1,31 @@
+<!--pages/user/download/download.wxml-->
+<view class="container">
+  <view class="cu-bar bg-white">
+    <view class="action">
+      <text class="cuIcon-title text-green"></text>
+      <text class="text-grey">点击按钮下载对应时间段打卡信息</text>
+    </view>
+  </view>
+  <view class="box">
+    <!-- <view class="cu-bar btn-group">
+    <button class="cu-btn bg-green shadow-blur round lg">保存</button>
+  </view> -->
+    <view class="cu-bar btn-group">
+      <button class="cu-btn bg-green shadow-blur" data-dtype='0' bindtap="downloadExcel">昨日</button>
+      <button class="cu-btn bg-green shadow-blur" data-dtype='1' bindtap="downloadExcel">今日</button>
+    </view>
+    <view class="cu-bar btn-group">
+      <button class="cu-btn bg-green shadow-blur" data-dtype='2' bindtap="downloadExcel">上周</button>
+      <button class="cu-btn bg-green shadow-blur" data-dtype='3' bindtap="downloadExcel">本周</button>
+      <!-- <button class="cu-btn text-green line-green shadow">上月</button> -->
+    </view>
+    <view class="cu-bar btn-group">
+      <button class="cu-btn bg-green shadow-blur" data-dtype='4' bindtap="downloadExcel">上月</button>
+      <button class="cu-btn bg-green shadow-blur" data-dtype='5' bindtap="downloadExcel">本月</button>
+    </view>
+    <!-- <view class="cu-bar btn-group">
+    <button class="cu-btn bg-green shadow-blur round">保存</button>
+    <button class="cu-btn bg-blue shadow-blur round">提交</button>
+  </view> -->
+  </view>
+</view>

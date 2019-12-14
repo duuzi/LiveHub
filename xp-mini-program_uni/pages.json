@@ -1,0 +1,100 @@
+{
+	"pages": [
+		{
+			"path": "pages/home/home",
+			"style": {
+				"backgroundTextStyle": "light",
+				"navigationBarBackgroundColor": "#fff",
+				"navigationBarTitleText": "Color UI",
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/basics/bmi/bmi",
+			"style": {
+				"navigationBarTitleText": "BMI"
+			}
+		},
+		{
+			"path": "pages/basics/todolist/todolist",
+			"style": {
+				"navigationBarTitleText": "待办事项"
+			}
+		},
+		{
+			"path": "pages/basics/signIn/signIn",
+			"style": {
+				"navigationBarTitleText": "今日打卡"
+			}
+		},
+		{
+			"path": "pages/logs/logs",
+			"style": {
+				"navigationBarTitleText": "查看启动日志"
+			}
+		},
+		{
+			"path": "pages/user/profile",
+			"style": {
+				"navigationBarTitleText": "我的信息"
+			}
+		},
+		{
+			"path": "pages/user/index/index",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/history/history",
+			"style": {
+				"navigationBarTitleText": "打卡记录"
+			}
+		},
+		{
+			"path": "pages/auth/auth",
+			"style": {}
+		},
+		{
+			"path": "pages/user/login",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/user/reg",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		}
+	],
+	"tabBar": {
+		"custom": false,
+		"color": "#000000",
+		"selectedColor": "#11cd6e",
+		"borderStyle": "white",
+		"position": "bottom",
+		"list": [
+			{
+				"selectedIconPath": "./static/images/sshouye.png",
+				"iconPath": "./static/images/shouye.png",
+				"pagePath": "pages/home/home",
+				"text": "首页"
+			},
+			{
+				"selectedIconPath": "./static/images/suser.png",
+				"iconPath": "./static/images/user.png",
+				"pagePath": "pages/user/index/index",
+				"text": "我的"
+			}
+		]
+	},
+	"globalStyle": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "WeChat",
+		"navigationBarTextStyle": "black"
+	},
+	"subPackages": []
+}

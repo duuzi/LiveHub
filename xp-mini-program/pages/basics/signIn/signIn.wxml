@@ -1,0 +1,23 @@
+<!--pages/basics/signIn/signIn.wxml-->
+<view wx:if="{{!signed}}">
+  <form bindsubmit="submitSignIn">
+    <view class="cu-form-group margin-top">
+      <textarea maxlength="-1" name='signInText' bindinput="textareaAInput" placeholder="{{phtext}}"></textarea>
+    </view>
+    <view class="action">
+      <view class="cu-bar btn-group margin-top-xl">
+        <button formType="submit" class="cu-btn bg-olive round lg shadow">打卡</button>
+      </view>
+    </view>
+  </form>
+</view>
+<view wx:else>
+  <view class="flex-sub text-center">
+    <view class="solid-bottom text-xsl padding">
+      <text class=" cuIcon-roundcheckfill text-green"></text>
+    </view>
+    <view class="padding text-black text-bold">今日已签到</view>
+    <view class="padding text-grey">{{signText}}</view>
+  </view>
+  
+</view>

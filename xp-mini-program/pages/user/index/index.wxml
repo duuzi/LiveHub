@@ -1,0 +1,64 @@
+<view class="container">
+  <view class="profile-info bg-gradual-blue">
+    <image bindtap="onUserInfoClick" class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    <view class="info">
+      <text class='name' bindtap='onUserInfoClick'>{{ userInfo.nickName || '点击登录' }}</text>
+      <!-- <text class='level' bindtap='onUserInfoClick'></text> -->
+    </view>
+    <image bindtap="onUserLogOut" class='btn' src='/images/address_right.png'></image>
+    <!-- <image bindtap="onUserInfoClick" class='btn' src='/images/address_right.png'></image> -->
+  </view>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/user/user" hover-class="none">
+        <text class="cuIcon-profile text-blue"></text>
+        <text class="text">我的信息</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/history/history" hover-class="none">
+        <text class="cuIcon-calendar text-green"></text>
+        <text class="text">打卡记录</text>
+      </navigator>
+    </view>
+    <!-- <view wx:if="{{showDownload}}" class="cu-item arrow">
+      <navigator class="content" url="/pages/user/download/download" hover-class="none">
+        <text class="cuIcon-down text-grey"></text>
+        <text class="text">统计下载</text>
+      </navigator>
+    </view> -->
+    <view class="cu-item arrow">
+      <view class="content" bindtap="showQrcode">
+        <text class="cuIcon-appreciatefill text-red"></text>
+        <text class="text">赞赏支持</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- <view class="user-menu">
+    <view class="item">
+      <navigator url="/pages/user/user" class="a">
+        <text class="icon order"></text>
+        <text class="txt">我的信息</text>
+      </navigator>
+    </view>
+    <view class="item">
+      <navigator url="/pages/history/history" class="a">
+        <text class="icon order"></text>
+        <text class="txt">打卡记录</text>
+      </navigator>
+    </view>
+  </view> -->
+
+  <!-- <view class="logout" bindtap="exitLogin">退出登录</view> -->
+</view>
+
+<view class='dialog-login' wx:if="{{showLoginDialog}}" bindtap='onCloseLoginDialog'>
+  <view class='dialog-body' catchtap='onDialogBody'>
+    <view class='title'>请选择登录方式</view>
+    <view class='content'>
+      <button type="primary" open-type="getUserInfo" bindgetuserinfo="onWechatLogin">微信登录</button>
+      <!-- <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onWechatLogin">手机号登录</button> -->
+    </view>
+  </view>
+</view>

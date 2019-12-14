@@ -1,0 +1,40 @@
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">
+      <text class="cuIcon-newshot"></text> 签到打卡</view>
+    <view class="page__desc">
+      <text class="cuIcon-info lg"></text> 该功能仅供出差打卡使用</view>
+  </view>
+  <!--页头-->
+  <view class="page__bd page__bd_spacing">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="cu-form-group">
+        <view class="title"><text class="text-grey">签到类型</text></view>
+        <radio-group name="bsType" value='{{bsType}}' bindchange="checkboxChange">
+          <label class="checkbox" wx:for="{{bsTypes}}" wx:key="{{item.id}}">
+            <radio value="{{item.id}}" checked="{{item.checked}}" style="margin-left:20rpx" />   {{item.name}}
+          </label>
+        </radio-group>
+      </view>
+      <view class="cu-form-group">
+        <view class="title"><text class="text-grey">出发时间</text></view>
+        <picker name="time" value='{{time}}' bindchange="bindTimeChange" value="{{timeIndex}}" range="{{times}}" range-key="name">
+          <view class="picker">
+          <text class="text-grey">当前选择：</text>{{times[timeIndex].name}}
+          </view>
+        </picker>
+      </view>
+      <view class="cu-form-group">
+        <view class="title"><text class="text-grey">出发地</text></view>
+        <input name="from" value="{{from}}" placeholder="请输入出发地" />
+      </view>
+      <view class="cu-form-group margin-bottom">
+        <view class="title"><text class="text-grey">目的地</text></view>
+        <input name="to" value="{{to}}" placeholder="请输入目的地" />
+      </view>
+      <button formType="submit" type="primary" loading="{{loading}}" disabled="{{disabled}}" class=""> 签到 </button>
+    </form>
+  </view>
+  <!--主体-->
+
+</view>

@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 点击授权 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view>工号</view>
+  <view class="btn-area">  
+   <navigator open-type="switchTab" url="/pages/business/business" hover-class="navigator-hover">跳转签到页面</navigator>  
+   <navigator open-type="navigate" url="/pages/user/user" hover-class="navigator-hover">完善资料</navigator>  
+ </view>  
+</view>

@@ -1,0 +1,38 @@
+miniprogram to uni-app 转换日志
+
+---基本信息---
+时间: 2019-12-10 13:37:22
+转换模式: Hbuilder X
+是否转换wxs文件: true
+
+---小程序基本信息---
+name: xp-mini-program
+version: 
+description: 
+appid: wxc841b58af7d98e6f
+projectname: 
+compileType: miniprogram
+author: 
+
+---目录信息---
+sourceFolder: F:\MyProject\miniprogram\xp-mini-program
+targetFolder: F:\MyProject\miniprogram\xp-mini-program_uni
+outputFolder: F:\MyProject\miniprogram\xp-mini-program_uni
+miniprogramRoot: F:\MyProject\miniprogram\xp-mini-program
+
+---日志信息---
+image漏网之鱼:    src--> "{{userInfo.avatarUrl}}"     file--> pages\user\index\index.wxml
+image漏网之鱼:    src--> "{{userInfo.avatarUrl}}"     file--> pages\index\index.wxml
+
+转换完成: 
+耗时：4409ms
+当前转换模式：【Hbuilder X】，生成HbuilderX项目。
+优点：上手快，项目结构较简单；
+缺点：资源路径会因为表达式而无法全部被修复(需手动修复)
+
+注意：
+1.当看到"image漏网之鱼"，意味着您需要手动调整对应代码，当image标签的src属性是含变量或表达式，工具还无法做到100%转换，需要手动修改为相对/static目录的路径(使用vue-cli模式可以解决，参数：-c)
+2.代码<template is="abc" data=""/>里data属性，除了不支持...扩展运算符(因uni-app现在还不支持v-bind="")，其余参数形式都支持，望知悉！
+
+日志说明：
+1. image漏网之鱼 --> 为HbuilderX模式时，需要将资源移动到static，并且修复相应文件路径，有可能src为网络文件，有可能为变量或表达式，可能会导致转换后文件找不到，因此提示一下

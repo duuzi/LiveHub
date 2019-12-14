@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Api.LiveHub</name>
+    </assembly>
+    <members>
+        <member name="M:Api.LiveHub.Controllers.AccountController.LoginByApp(Api.LiveHub.Dto.AccountDto)">
+            <summary>
+            app登录
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.LiveHub.Controllers.AccountController.Regist(Api.LiveHub.Dto.AccountDto)">
+            <summary>
+            app注册
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.LiveHub.Controllers.AccountController.UpdateUser(Api.LiveHub.Dto.AccountDto)">
+            <summary>
+            更新手机号
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.LiveHub.Controllers.WxOpen.WxOpenController.LoginByWeixin(System.String,System.String)">
+            <summary>
+            wx.login登陆成功之后发送的请求
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
